@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+html, body { width: 100%; overflow-x: clip; }
+body { @apply bg-bg text-slate-100 antialiased; }
+
+.theme-light main {
+  background: radial-gradient(circle at 15% 15%, #d7e3ff, #f2f6ff 55%);
+  color: #0f172a;
+}
+
+.theme-light .border-white\/10,
+.theme-light .border-white\/20,
+.theme-light .border-white\/25 {
+  border-color: rgba(15, 23, 42, 0.16) !important;
+}
+
+.theme-light .text-slate-100 { color: #0f172a !important; }
+.theme-light .text-slate-300,
+.theme-light .text-slate-400 { color: #334155 !important; }
+.theme-light .bg-white\/5 { background-color: rgba(255,255,255,.78) !important; }
+.theme-light .bg-white\/10 { background-color: rgba(255,255,255,.84) !important; }
+.theme-light .bg-panel { background-color: #ffffff !important; }
+
+.noise {
+  background-image: radial-gradient(rgba(255,255,255,0.09) 0.6px, transparent 0.6px);
+  background-size: 3px 3px;
+}
+
+@media (max-width: 1023px) {
+  .noise,
+  .layer-back,
+  .layer-mid {
+    opacity: 0.08 !important;
+  }
+
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl {
+    backdrop-filter: none !important;
+  }
+}
+
+*::-webkit-scrollbar { width: 10px; }
+*::-webkit-scrollbar-thumb { background: rgba(148,163,184,.35); border-radius: 999px; }
